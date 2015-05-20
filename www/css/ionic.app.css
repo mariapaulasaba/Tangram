@@ -7674,3 +7674,19 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+#connect {
+  width: 100%;
+  margin-top: 200px; }
+  #connect button {
+    margin: auto;
+    display: block;
+    width: 50%; }
+
+#disconnect {
+  width: 100%;
+  margin-top: 200px; }
+  #disconnect button {
+    margin: auto;
+    display: block;
+    width: 50%; }

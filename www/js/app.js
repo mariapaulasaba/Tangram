@@ -28,7 +28,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // setup an abstract state for the tabs directive
   .state('connect', {
     url: "/connect",
-    templateUrl: "templates/connect.html"
+    templateUrl: "templates/connect.html",
+	controller: 'ConnectCtrl'
   })
   
   
@@ -69,7 +70,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   }) 
   
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/challenges');
+  $urlRouterProvider.otherwise('/connect');
 })
 
 

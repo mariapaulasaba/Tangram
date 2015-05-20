@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.tangram165629" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Tangram</name>
+  <name>Smart Tangram</name>
   <description>
-        An Ionic Framework and Cordova project.
+       App to interact with Smart Tangram devices.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="design@mariapaulasaba.com" href="http://mariapaulasaba.com/">
+      Maria Paula Saba
     </author>
   <content src="index.html"/>
   <access origin="*"/>
