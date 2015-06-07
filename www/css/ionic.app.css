@@ -7675,18 +7675,132 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-#connect {
-  width: 100%;
-  margin-top: 200px; }
-  #connect button {
+/*--------------------------------- GENERAL CSS ---------------------------------*/
+ion-header-bar {
+  background-color: #fff !important;
+  font-weight: lighter !important;
+  font-size: 12px; }
+
+.blueBtn {
+  margin-top: 18%; }
+  .blueBtn button {
     margin: auto;
     display: block;
     width: 50%; }
 
-#disconnect {
+/*--------------------------------- START PAGE ---------------------------------*/
+#start_logo {
   width: 100%;
-  margin-top: 200px; }
-  #disconnect button {
+  margin-top: 35%; }
+  #start_logo img {
+    width: 50%;
     margin: auto;
-    display: block;
-    width: 50%; }
+    display: block; }
+
+/*--------------------------------- CONNECT PAGE ---------------------------------*/
+.pieces_list {
+  margin: auto;
+  margin-top: 40px;
+  padding-left: 20px;
+  width: 300px;
+  height: 45%;
+  display: block; }
+
+.connect_list img {
+  width: 80px;
+  float: left;
+  margin: 5px;
+  margin-bottom: 40px;
+  border: 1px solid #f00; }
+
+.piece_connected img {
+  width: 80px;
+  float: left;
+  margin: 5px;
+  margin-bottom: 40px;
+  border: 1px solid #00b507; }
+
+/*--------------------------------- HEADER TABS ---------------------------------*/
+.tabs_header {
+  margin: auto;
+  padding-top: 10px;
+  display: block; }
+  .tabs_header img {
+    width: 20px;
+    float: left; }
+
+.title_head {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 1.5em;
+  padding-left: 4px;
+  float: left;
+  margin: auto; }
+
+/*--------------------------------- CHALLENGES TAB ---------------------------------*/
+.challenger_image {
+  width: 100%;
+  margin-top: 35%; }
+  .challenger_image img {
+    width: 50%;
+    margin: auto;
+    display: block; }
+
+.challenger_label {
+  margin-top: 18%; }
+  .challenger_label .challenger_number {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2.5em; }
+  .challenger_label .challenger_text {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.2em; }
+
+/*--------------------------------- COLOR TAB ---------------------------------*/
+.top_row {
+  padding-top: 64px !important; }
+
+.select_row {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 20px; }
+
+.button-bar {
+  margin: auto;
+  margin-top: 25px;
+  width: 75%; }
+  .button-bar .selected {
+    border-color: #0c60ee;
+    background-color: #387ef5;
+    color: #fff; }
+
+.scroll_pieces_menu {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 20px; }
+  .scroll_pieces_menu img {
+    width: 80px;
+    margin: 5px;
+    border: 1px solid #919191; }
+
+.scroll_color_menu {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 20px; }
+  .scroll_color_menu img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border: 1px solid #919191; }
+
+/*--------------------------------- SETTINGS TAB ---------------------------------*/
+.disconnect {
+  margin-top: 200px; }

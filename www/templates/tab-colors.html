@@ -1,6 +1,37 @@
 <ion-view view-title="Colors">
-  <ion-content class="">
-    <div>Here comes Colors HTML</div>
-      
-  </ion-content>
+	<ion-header-bar class="bar-stable">
+        <div class="tabs_header">
+            <img src="img/small_logo.png"> 
+            <p class="title_head">COLORS</p>
+        </div>  
+    </ion-header-bar>
+    
+  <div class="select_row top_row">
+      <div class="item item-divider">
+        Select Pieces
+      </div>
+      <div class="button-bar">
+        <a class="button selected">1 Piece</a>
+        <a class="button">All Parts</a>
+      </div>
+     <ion-scroll direction="x" scrollbar-x="false" class="scroll_pieces_menu"> 	
+		<img ng-repeat="device in devices" ng-if="device.connected" ng-click="changeId($index)" ng-src={{imagesOff[$index]}}>
+     </ion-scroll> 
+	</div>
+    
+
+    <div class="select_row">
+ 		<div class="item item-divider">
+        	Select Color
+		</div>	
+     <ion-scroll direction="x" scrollbar-x="false" class="scroll_color_menu"> 	
+		<img class="color" style="background-color:#f00" ng-click='sendColor("red")'/>
+		<img class="color" style="background-color:#4500ff" ng-click='sendColor("blue")'/>
+		<img class="color" style="background-color:#ff12f6" ng-click="sendColor(blue)"/>
+		<img class="color" style="background-color:#00d874" ng-click="sendColor(pink)"/>
+		<img class="color" style="background-color:#f5ff00" ng-click="sendColor(f5,ff,00)"/>
+		<img class="color" style="background-color:#00f5ff" ng-click="sendColor(00,f5,ff)"/>
+     </ion-scroll> 		
+	</div>
+	
 </ion-view>

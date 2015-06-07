@@ -1,5 +1,15 @@
-<ionic-view title="connect">
-	<div id="connect">
-		<button ng-click="connect()" >Connect here</button>
+<ionic-view title="connect">		    
+    <div class="blueBtn">
+		<button class="button button-block button-positive" ng-click="scan()" >Scan Pieces</button>
+	</div>
+	<div class="pieces_list">
+		<div ng-repeat="device in devices" ng-if="device.name != 'empty'"   class="connect_list"  ng-class="{piece_connected: device.connected}" ng-click="connectDevice($index)">
+			<img ng-src={{imagesOff[$index]}}>
+		</div>
+	</div>
+
+	<div class="blueBtn">
+		<button class="button button-block button-positive" ng-click="ready()" >Ready</button>
 	</div>
 </ionic-view>
+

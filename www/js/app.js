@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, Bluetooth) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -15,7 +15,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+	  
+	$rootScope.imagesOff = [
+		"img/piece-0-off.png","img/piece-1-off.png","img/piece-2-off.png","img/piece-3-off.png","img/piece-4-off.png","img/piece-5-off.png","img/piece-6-off.png"];
+	$rootScope.imagesOn = [
+		"img/piece-0-on.png","img/piece-1-on.png","img/piece-2-on.png","img/piece-3-on.png","img/piece-4-on.png","img/piece-5-on.png","img/piece-6-on.png"];			
+
+//	$rootScope.devices = Bluetooth.getPuzzle();
+//	console.log($rootScope.devices);
   });
+	   	
 })
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -26,6 +35,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
+  .state('start', {
+    url: "/start",
+    templateUrl: "templates/start.html",
+	controller: 'StartCtrl'
+  })
+  
   .state('connect', {
     url: "/connect",
     templateUrl: "templates/connect.html",
@@ -58,8 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'ColorsCtrl'
       }
     }
-  }) 
-  .state('tab.settings', {
+  })  .state('tab.settings', {
     url: '/settings',
     views: {
       'tab-settings': {
@@ -70,7 +84,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   }) 
   
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/connect');
+  $urlRouterProvider.otherwise('/start');
 })
 
 

@@ -1,6 +1,20 @@
-<ion-view view-title="Challenges">
-  <ion-content class="">
-    <div>Here comes Challenges HTML</div>
-      
-  </ion-content>
+<ion-view view-title="Challenges" >
+    <ion-header-bar class="bar-stable">
+        <div class="tabs_header">
+            <img src="img/small_logo.png"> 
+            <p class="title_head">CHALLENGER</p>
+        </div>     
+    </ion-header-bar>
+
+	<ion-slide-box on-slide-changed="challengSwipe($index)" does-continue="true" show-pager="false">
+	  <ion-slide ng-repeat="challenge in challenges">
+			<div class="challenger_image" >
+				<img ng-src={{challenge.img}} > 
+			</div> 
+		  <div class="challenger_label">
+			<p class="challenger_number">{{challenge.id}}/{{challenges.length}}</p>
+			<p class="challenger_text">{{challenge.text}}</p>
+		</div>
+	</ion-slide>
+
 </ion-view>
